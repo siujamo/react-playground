@@ -1,0 +1,20 @@
+.dashboard-wrapper {
+
+  .dashboard-header {
+    background-color: red;
+    height: 60px;
+  }
+
+  .dashboard-content-wrapper {
+
+    .dashboard-sidebar {
+      background-color: red;
+    }
+
+    .dashboard-content {
+      height: calc(100vh - 60px);
+    }
+
+  }
+
+}
