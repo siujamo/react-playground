@@ -6,16 +6,19 @@ import { DashboardLayout } from "@/layout/dashboard-layout"
 import { Home } from "@/pages/home"
 import { Personal } from "@/pages/personal"
 import { store } from "@/store"
+import { ReduxProvider } from "@/provider/redux-provider"
 
 createRoot(document.getElementById("root")!).render(
   <Provider store={store}>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<DashboardLayout />}>
-          <Route index element={<Home />} />
-          <Route path="me" element={<Personal />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <ReduxProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<DashboardLayout />}>
+            <Route index element={<Home />} />
+            <Route path="personal" element={<Personal />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </ReduxProvider>
   </Provider>
 )

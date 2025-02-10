@@ -1,14 +1,24 @@
 .dashboard-wrapper {
 
   .dashboard-header {
-    background-color: red;
     height: 60px;
   }
 
   .dashboard-content-wrapper {
+    .dashboard-sidebar-wrapper {
+      background-color: #ffffff;
 
-    .dashboard-sidebar {
-      background-color: red;
+      .dashboard-sidebar {
+        display: flex;
+        flex-direction: column;
+
+        .dashboard-sidebar-buttons {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          margin: 8px;
+        }
+      }
     }
 
     .dashboard-content {
